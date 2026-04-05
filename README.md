@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earn Money - Promotional Videos</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: #333;
+        }
+        .header {
+            background: #0088cc;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .video-card {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn-watch {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .btn-watch:hover {
+            background: #218838;
+        }
+        .ads-notice {
+            font-size: 12px;
+            color: #777;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2>ভিডিও দেখুন এবং ইনকাম করুন</h2>
+        <p>নিচের ভিডিওগুলো দেখলে আমাদের প্রজেক্ট সাপোর্ট হবে।</p>
+    </div>
+
+    <div class="video-card">
+        <h3>স্পেশাল প্রমোশনাল ভিডিও ১</h3>
+        <p>এই ভিডিওটি দেখলে আপনি নতুন অফার সম্পর্কে জানতে পারবেন।</p>
+        <a href="YOUR_MONETAG_DIRECT_LINK_HERE" target="_blank" class="btn-watch">ভিডিওটি দেখুন</a>
+        <p class="ads-notice">* ভিডিও শুরু হওয়ার আগে একটি বিজ্ঞাপন আসতে পারে।</p>
+    </div>
+
+    <div class="video-card">
+        <h3>এক্সক্লুসিভ অফার ভিডিও ২</h3>
+        <p>সেরা ডিলগুলো দেখতে এখনই ক্লিক করুন।</p>
+        <a href="YOUR_MONETAG_DIRECT_LINK_HERE" target="_blank" class="btn-watch">ভিডিওটি দেখুন</a>
+        <p class="ads-notice">* ভিডিও লোড হতে বিজ্ঞাপন দেখালে স্কিপ করবেন না।</p>
+    </div>
+
+    <script>
+        // টেলিগ্রাম ওয়েব অ্যাপ সেটআপ
+        const tele = window.Telegram.WebApp;
+        tele.ready();
+        tele.expand(); // অ্যাপটি বড় স্ক্রিনে দেখাবে
+    </script>
+</body>
+</html>
