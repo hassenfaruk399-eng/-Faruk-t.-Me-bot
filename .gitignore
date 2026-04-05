@@ -1,9 +1,20 @@
+<script src='//libtl.com/sdk.js' data-zone='10836079' data-sdk='show_10836079'></script>
+
+
+এটা হচ্ছে প্রথম কোড 
+
+// Rewarded Popup show_10836079('pop').then(() => { // user watch ad till the end or close it in interstitial format // your code to reward user for rewarded format }).catch(e => { // user get error during playing ad // do nothing or whatever you want })
+
+
+এটা হচ্ছে দ্বিতীয় কোড
+You sent
 <!DOCTYPE html>
 <html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Earn Money - Promotional Videos</title>
+    <script src='//libtl.com/sdk.js' data-zone='10836079' data-sdk='show_10836079'></script>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <style>
         body {
@@ -33,11 +44,12 @@
             background: #28a745;
             color: white;
             padding: 10px 20px;
-            text-decoration: none;
+            border: none;
             border-radius: 5px;
             font-weight: bold;
             margin-top: 10px;
             cursor: pointer;
+            font-size: 16px;
         }
         .btn-watch:hover {
             background: #218838;
@@ -57,16 +69,16 @@
     </div>
 
     <div class="video-card">
-        <h3>স্পেশাল প্রমোশনাল ভিডিও ১</h3>
+        <h3>স্পেশাল প্রমোショナル ভিডিও ১</h3>
         <p>এই ভিডিওটি দেখলে আপনি নতুন অফার সম্পর্কে জানতে পারবেন।</p>
-        <a href="YOUR_MONETAG_DIRECT_LINK_HERE" target="_blank" class="btn-watch">ভিডিওটি দেখুন</a>
+        <button onclick="showAd()" class="btn-watch">ভিডিওটি দেখুন</button>
         <p class="ads-notice">* ভিডিও শুরু হওয়ার আগে একটি বিজ্ঞাপন আসতে পারে।</p>
     </div>
 
     <div class="video-card">
         <h3>এক্সক্লুসিভ অফার ভিডিও ২</h3>
         <p>সেরা ডিলগুলো দেখতে এখনই ক্লিক করুন।</p>
-        <a href="YOUR_MONETAG_DIRECT_LINK_HERE" target="_blank" class="btn-watch">ভিডিওটি দেখুন</a>
+        <button onclick="showAd()" class="btn-watch">ভিডিওটি দেখুন</button>
         <p class="ads-notice">* ভিডিও লোড হতে বিজ্ঞাপন দেখালে স্কিপ করবেন না।</p>
     </div>
 
@@ -74,7 +86,24 @@
         // টেলিগ্রাম ওয়েব অ্যাপ সেটআপ
         const tele = window.Telegram.WebApp;
         tele.ready();
-        tele.expand(); // অ্যাপটি বড় স্ক্রিনে দেখাবে
+        tele.expand();
+
+        // Monetag Rewarded Ad Function
+        function showAd() {
+            if (typeof show_10836079 === 'function') {
+                show_10836079('pop').then(() => {
+                    // সফলভাবে বিজ্ঞাপন দেখা শেষ হলে এখানে আপনার রিওয়ার্ড কোড লিখুন
+                    alert("অভিনন্দন! আপনি সফলভাবে ভিডিওটি দেখেছেন।");
+                    console.log("User rewarded successfully.");
+                }).catch(e => {
+                    // যদি কোনো সমস্যা হয় বা বিজ্ঞাপন না আসে
+                    alert("বিজ্ঞাপন লোড হতে সমস্যা হয়েছে, আবার চেষ্টা করুন।");
+                    console.error("Ad error:", e);
+                });
+            } else {
+                alert("বিজ্ঞাপন লোড হচ্ছে, অনুগ্রহ করে কিছুক্ষণ অপেক্ষা করুন।");
+            }
+        }
     </script>
 </body>
 </html>
